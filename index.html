@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竜の旅路亭 - Dragon's Journey Tavern</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-title">
+                <span class="title-en">Dragon's Journey Tavern</span>
+                <span class="title-jp">竜の旅路亭</span>
+            </div>
+            <a href="#" class="blog-link" target="_blank" rel="noopener">&#x1F4DC; Ronnie's Blog</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="current-menu">
+            <div class="section-banner">
+                <h2>今回のメニュー</h2>
+                <p class="section-sub">Current Menu</p>
+                <p class="event-label" id="event-label"></p>
+            </div>
+            <div class="current-grid" id="current-grid"></div>
+        </section>
+
+        <section id="archive">
+            <div class="section-banner">
+                <h2>料理図鑑</h2>
+                <p class="section-sub">The Grand Compendium</p>
+            </div>
+            <div class="archive-grid" id="archive-grid"></div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-panel">
+            <button class="modal-close" id="modal-close" aria-label="閉じる">&#x2715;</button>
+            <img class="modal-image" id="modal-image" src="" alt="">
+            <div class="modal-info">
+                <h3 class="modal-name" id="modal-name"></h3>
+                <p class="modal-name-sub" id="modal-name-sub"></p>
+                <p class="modal-description" id="modal-description"></p>
+                <div class="modal-ingredients" id="modal-ingredients"></div>
+                <p class="modal-event" id="modal-event"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

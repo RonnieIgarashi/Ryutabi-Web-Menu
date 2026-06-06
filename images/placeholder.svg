@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#2C5F2E"/>
+  <rect x="2" y="2" width="396" height="296" fill="none" stroke="#C9A84C" stroke-width="2"/>
+  <text x="200" y="130" font-family="serif" font-size="56" fill="#C9A84C" text-anchor="middle">&#x1F409;</text>
+  <text x="200" y="178" font-family="serif" font-size="18" fill="#C9A84C" text-anchor="middle" letter-spacing="4">竜の旅路亭</text>
+  <text x="200" y="208" font-family="serif" font-size="12" fill="#8faf90" text-anchor="middle" letter-spacing="2">No Image</text>
+</svg>

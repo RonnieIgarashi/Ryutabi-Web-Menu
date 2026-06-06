@@ -1,0 +1,28 @@
+{
+  "current_event": {
+    "number": 8,
+    "date": "2026-06-XX"
+  },
+  "dishes": [
+    {
+      "id": "puttanesca-01",
+      "name": "プッタネスカ",
+      "name_sub": "Puttanesca",
+      "event_number": 8,
+      "is_current": true,
+      "image": "images/puttanesca-01.jpg",
+      "description": "南イタリア生まれの力強いパスタ。\nオリーブ・アンチョビ・ケッパーが織りなす複雑な旨味。",
+      "ingredients": ["パスタ", "トマト缶", "オリーブ", "アンチョビ", "ケッパー", "ニンニク"]
+    },
+    {
+      "id": "sample-archive-01",
+      "name": "（過去料理サンプル）",
+      "name_sub": "Sample Dish",
+      "event_number": 1,
+      "is_current": false,
+      "image": "",
+      "description": "料理の説明を入力してください。",
+      "ingredients": ["食材A", "食材B"]
+    }
+  ]
+}
