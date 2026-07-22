@@ -1,25 +1,20 @@
 data "aws_iam_policy_document" "gallery_bucket" {
   statement {
-    sid    = "AllowCloudFrontAccess"
+    sid    = "PublicReadAccess"
     effect = "Allow"
 
     principals {
-      type        = "Service"
-      identifiers = ["cloudfront.amazonaws.com"]
+      type        = "*"
+      identifiers = ["*"]
     }
 
     actions   = ["s3:GetObject"]
     resources = ["${aws_s3_bucket.gallery.arn}/*"]
-
-    condition {
-      test     = "StringEquals"
-      variable = "AWS:SourceArn"
-      values   = [aws_cloudfront_distribution.gallery.arn]
-    }
   }
 }
 
 resource "aws_s3_bucket_policy" "gallery" {
-  bucket = aws_s3_bucket.gallery.id
-  policy = data.aws_iam_policy_document.gallery_bucket.json
+  bucket     = aws_s3_bucket.gallery.id
+  policy     = data.aws_iam_policy_document.gallery_bucket.json
+  depends_on = [aws_s3_bucket_public_access_block.gallery]
 }

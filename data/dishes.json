@@ -1,28 +1,349 @@
-{
+﻿{
   "current_event": {
-    "number": 8,
-    "date": "2026-06-XX"
+    "number": 10,
+    "date": "2026-07-24"
   },
   "dishes": [
     {
-      "id": "puttanesca-01",
-      "name": "プッタネスカ",
-      "name_sub": "Puttanesca",
-      "event_number": 8,
+      "id": "mixed-nuts-09",
+      "name": "香ばしミックスナッツ",
+      "name_sub": "Toasted Mixed Nuts",
+      "category": "appetizer",
+      "event_number": 9,
       "is_current": true,
-      "image": "images/puttanesca-01.jpg",
-      "description": "南イタリア生まれの力強いパスタ。\nオリーブ・アンチョビ・ケッパーが織りなす複雑な旨味。",
-      "ingredients": ["パスタ", "トマト缶", "オリーブ", "アンチョビ", "ケッパー", "ニンニク"]
+      "image": "images/current/香ばしミックスナッツ.jpg",
+      "description": "カリッとした食感がたまらない、クルミ、アーモンド、カシューナッツの定番ミックスナッツ。\n月も高く上った頃、路地を歩いていたらまだやっている酒場を見つけた。お腹は空いてないけど、一杯飲んでいきたい。そう思って酒を頼むと、お隣さんが黙ってナッツの入った器を寄せてきた。おすそ分け、というわけだ。",
+      "ingredients": ["クルミ", "アーモンド", "カシューナッツ"]
     },
     {
-      "id": "sample-archive-01",
-      "name": "（過去料理サンプル）",
-      "name_sub": "Sample Dish",
+      "id": "penne-laatiikko-09",
+      "name": "トロールの夕食 - 挽肉とペンネのキャセロール",
+      "name_sub": "Troll's Dinner - Minced Meat & Penne Casserole",
+      "category": "main",
+      "event_number": 9,
+      "is_current": true,
+      "image": "images/current/トロールの夕食-ペンネラーティッコ.jpg",
+      "description": "フィンランド料理のマカロニラーティッコをアレンジしたオーブン料理。ペンネとミートソース、チーズを重ね焼き。卵液には生クリームを使って濃厚さUP！\n「ご飯まだ－？」騒ぐ子供たちの前にトロールのママが焼き立てのキャセロールを置くと一斉に歓声が上がった。「やったーマカロニラーティッコだ！ケチャップちょうだい！」",
+      "ingredients": ["ペンネ", "合挽き肉", "玉葱", "ニンニク", "シュレッドチーズ", "卵", "生クリーム", "牛乳", "ディル"]
+    },
+    {
+      "id": "mead-09",
+      "name": "蜂蜜酒(ミード)",
+      "name_sub": "Mead",
+      "category": "drink",
+      "event_number": 9,
+      "is_current": true,
+      "image": "images/current/蜂蜜酒(ミード).jpg",
+      "description": "",
+      "ingredients": []
+    },
+    {
+      "id": "ginger-ale-09",
+      "name": "自家製ジンジャーエール",
+      "name_sub": "Homemade Ginger Ale",
+      "category": "drink",
+      "event_number": 9,
+      "is_current": true,
+      "image": "images/current/自家製ジンジャーエール.jpg",
+      "description": "",
+      "ingredients": []
+    },
+    {
+      "id": "mage-appetizer-08",
+      "name": "見習い魔法使いの前菜3種セット",
+      "name_sub": "The Mage's Trio",
+      "category": "appetizer",
+      "event_number": 8,
+      "is_current": false,
+      "image": "images/current/見習い魔法使いの前菜3種セット_202606.jpg",
+      "description": "100%ライ麦パンの小エビのマリネオープンサンド、夏野菜のカポナータ、フィンランドの豆料理であるヘルネトゥーヴィンキ3種盛り合わせ。\n見習い魔法使いが任された前菜3種盛り。色んな国の料理だけど、彼の好きな甘めの料理に寄りがちだ。",
+      "ingredients": ["100%ライ麦パン", "冷凍小エビ", "クリームチーズ", "林檎", "蜂蜜", "パンチェッタ", "トマト", "茄子", "ピーマン", "ニンニク", "玉葱", "人参", "ズッキーニ", "レーズン", "グリンピース", "生クリーム", "小麦粉"]
+    },
+    {
+      "id": "mage-appetizer-trio-10",
+      "name": "見習い魔法使いの前菜セット",
+      "name_sub": "The Mage's Trio (New Recipe)",
+      "category": "appetizer",
+      "event_number": 10,
+      "is_current": true,
+      "image": "images/current/見習い魔法使いの前菜セット_202607.jpg",
+      "description": "（文章準備中：ロニーが後で差し替えます）",
+      "ingredients": ["キュウリ", "焼きソーセージ", "カポナータ（茄子・トマト・ピーマン・玉葱・人参・ズッキーニなど）"]
+    },
+    {
+      "id": "puttanesca-08",
+      "name": "季節野菜の娼婦風リングイーネ",
+      "name_sub": "Puttanesca with Seasonal Vegetables",
+      "category": "main",
+      "event_number": 8,
+      "is_current": true,
+      "image": "images/current/季節野菜の娼婦風リングイーネ.jpg",
+      "description": "保存食糧でさっと仕上げる'大人な装いの'パスタ。\n身も心も癒してくれるという高貴な出の娼婦の噂は領主や貴族までもを魅了した。おや、また高価そうな外套を目深に被った男が館に入って行った。",
+      "ingredients": ["スパゲティ", "トマト缶", "ブラックオリーブ", "オイルサーディン", "ケッパー", "ニンニク", "唐辛子", "パン粉", "パセリ", "季節の野菜(ズッキーニ、スナップエンドウなど)"]
+    },
+    {
+      "id": "carbonara-08",
+      "name": "春先の森のカルボナーラ",
+      "name_sub": "Forest Carbonara",
+      "category": "main",
+      "event_number": 8,
+      "is_current": false,
+      "image": "images/past/春先の森のカルボナーラ.jpg",
+      "description": "自家製パンチェッタと椎茸、アスパラを使ったカルボナーラ。\n深い森の中に住む魔女が振舞ってくれたのは、炭焼き職人から教えてもらったという料理だった。森の恵みを加えているのは、彼女のアレンジだ。",
+      "ingredients": ["スパゲティ", "自家製パンチェッタ", "椎茸", "アスパラガス", "卵", "ペコリーノロマーノ", "パルメザンチーズ", "牛乳", "ブラックペッパー", "白だし", "ピンクペッパー"]
+    },
+    {
+      "id": "lamb-sesame-08",
+      "name": "盗賊の岩屋 - ラム肉と黒ゴマのスパゲティ",
+      "name_sub": "Thief's Cave - Lamb & Black Sesame spaghetti",
+      "category": "main",
+      "event_number": 8,
+      "is_current": true,
+      "image": "images/current/盗賊の岩屋-ラム肉の黒ごまスパゲティ.jpg",
+      "description": "刻んだラム肉とほうれん草の黒ごま風味スパゲティ。\n砂漠で見つけた洞窟は盗賊たちのねぐらだった。物陰から彼らがランチを食べているのが見える。お腹が鳴って見つかりかねないぞ",
+      "ingredients": ["スパゲティ", "ラム肉", "ほうれん草", "黒胡麻", "ニンニク", "パクチー", "唐辛子", "醤油"]
+    },
+    {
+      "id": "honey-bread-08",
+      "name": "市場の蜂蜜バター揚げパン",
+      "name_sub": "Honey Fried Bread at Market",
+      "category": "dessert",
+      "event_number": 8,
+      "is_current": true,
+      "image": "images/current/市場の蜂蜜揚げパン.jpg",
+      "description": "蜂蜜をたっぷりかけた揚げパン。バターとラードでカリッと揚げ焼きに。\n今日も市場の一画に人だかりが出来ている。蠱惑的な甘い香りを漂わせる露店に寄ってみれば、駄賃を握りしめた小僧や娘たちが何やら揚げパンを手にしている。",
+      "ingredients": ["ライ麦入りパン", "蜂蜜", "ラード", "バター", "サラダ油"]
+    },
+    {
+      "id": "rattana-08",
+      "name": "ラッタナ-フィンランド風ブルーベリークランブル",
+      "name_sub": "Rättänä Finnish Blueberry Crumble",
+      "category": "dessert",
+      "event_number": 8,
+      "is_current": true,
+      "image": "images/current/ラッタナ-ブルーベリーのクランブル.jpg",
+      "description": "フィンランド伝統のブルーベリーをたっぷり使ったクランブルにバニラアイスを添えて。\nラッタナを頬張ったら、ベリー摘みをした夏の北の森が脳裏に広がった。遠くで鳥が笑っている。",
+      "ingredients": ["ブルーベリー", "薄力粉", "ライ麦", "バター", "砂糖", "コーンスターチ", "バニラアイス"]
+    },
+    {
+      "id": "trapanese-past",
+      "name": "南風のトラパネーゼ",
+      "name_sub": "Trapanese al Vento del Sud",
+      "category": "main",
       "event_number": 1,
       "is_current": false,
-      "image": "",
-      "description": "料理の説明を入力してください。",
-      "ingredients": ["食材A", "食材B"]
+      "image": "images/past/南風のトラパネーゼ.jpg",
+      "description": "シチリアのトラパノ発の郷土料理。アーモンドとバジルとトマトを使ったソース。\n船から降りると乾いた砂の匂いがした。「長旅で腹が減ってるだろ？そこの食堂が俺の行きつけなんだ。名産のアーモンドをたっぷり使ったトラパネーゼがオススメだ」これは頼まないわけにはいかない！",
+      "ingredients": ["フジッリまたはスパゲティ", "フレッシュトマト", "ローストアーモンド", "フレッシュバジル", "ニンニク", "オリーブオイル", "ペコリーノロマーノ", "季節の野菜"]
+    },
+    {
+      "id": "arabiata-past",
+      "name": "千夜一夜の魔人-ペンネ・アラビアータ",
+      "name_sub": "Spagetthi Arrabbiata",
+      "category": "main",
+      "event_number": 7,
+      "is_current": false,
+      "image": "images/past/千夜一夜の魔人アラビアータ.jpg",
+      "description": "吊るしベーコンとスパイスが香るエキゾチックなパスタ。\n灼熱の砂漠で出逢った魔人は、聞くに何でも願いを叶えてくれるらしい。怪しいからそっと通り過ぎよう…。",
+      "ingredients": ["ペンネ", "トマト缶", "ニンニク", "黒胡椒の吊るしベーコン", "茄子", "唐辛子", "クミン", "パセリ"]
+    },
+    {
+      "id": "spiced-toast-past",
+      "name": "香辛料が効いたトースト",
+      "name_sub": "Spiced Toast",
+      "category": "appetizer",
+      "event_number": 7,
+      "is_current": false,
+      "image": "images/past/香辛料が効いたトースト.jpg",
+      "description": "お手製のミックスハーブとニンニクが香るバゲットのトースト。\n香辛料の香りに誘われて何気なく頼んだトーストは何やら複雑な味わい。あぁ、ついついジョッキが進んでしまう。",
+      "ingredients": ["バゲット", "ラード", "バター", "ニンニク", "オリーブオイル", "ハーブミックス"]
+    },
+    {
+      "id": "finnish-plate-past",
+      "name": "フィンランド料理の前菜3種盛り",
+      "name_sub": "Finnish Appetizer Plate",
+      "category": "appetizer",
+      "event_number": 1,
+      "is_current": false,
+      "image": "images/past/フィンランド料理前菜プレート.jpg",
+      "description": "フィンランドの定番お祝い料理を3種セットで。濃縮サーモンの「グラーヴィロヒ」、素朴な人参の甘さ「ポルッカナラーティッコ」、色んな野菜を使ったサラダ「ロソッリ」\n冬至を祝う饗宴に招かれた。丸太が暖炉で爆ぜる音を聞きながらまた太陽の復活を皆で祝おう",
+      "ingredients": ["サーモン", "ディル", "レモン汁", "人参", "卵", "牛乳", "黒蜜","砂糖", "バター", "米", "クルミ", "パン粉", "パルメザンチーズ", "林檎", "赤カブ", "ジャガイモ", "ビーツ缶", "キュウリのピクルス", "生クリーム", "林檎酢"]
+    },
+    {
+      "id": "hernekeit-past",
+      "name": "ヘルネケイット - フィンランドの豆のスープ",
+      "name_sub": "Hernekeitto",
+      "category": "main",
+      "event_number": 1,
+      "is_current": false,
+      "image": "images/past/ヘルネケイット-グリンピース塩漬け豚肉のスープ.jpg",
+      "description": "フィンランドのソウルフード、グリンピースと塩漬け豚肉の煮込みスープ。\n金曜の断食に備えて腹持ちのよい豆のスープが大量に振舞われた。地味だが癖になる味わいだ。",
+      "ingredients": ["乾燥グリンピース", "塩漬け豚肉", "玉ねぎ", "シナッピ(フィンランド産マスタード)"]
+    },
+    {
+      "id": "karjalanpaisti-past",
+      "name": "カルヤランパイスティ-肉と玉葱の煮込みとライ麦入りパン",
+      "name_sub": "Karjalanpaisti",
+      "category": "main",
+      "event_number": 2,
+      "is_current": false,
+      "image": "images/past/カルヤランパイスティ(肉と玉葱の煮込み)&ライ麦パン.jpg",
+      "description": "カレリア地方の伝統的な肉と玉ねぎの煮込み料理。\nじっくり煮込んだシチューを口に運ぶ。どこか懐かしい味わいがした。",
+      "ingredients": ["牛肉", "豚肉", "玉ねぎ", "白胡椒", "ライ麦パン"]
+    },
+    {
+      "id": "laxoosi-past",
+      "name": "ラスキソーシ-豚肉のブラウンソースと茹でジャガイモ",
+      "name_sub": "Läskisoosi",
+      "category": "main",
+      "event_number": 2,
+      "is_current": false,
+      "image": "images/past/ラスキソーシ-豚肉ブラウンソースと茹でジャガイモ.jpg",
+      "description": "フィンランド伝統の武骨な家庭料理。醤油とマスタードでコクを追加し、白菜で軽くした。\n寝床を探していた時に誘ってくれた男性が手料理を振舞ってくれた。素朴ながら力強い味だ。これは明日も働く力が湧いてくるってもんだ。",
+      "ingredients": ["ジャガイモ", "豚肉", "玉ねぎ", "白菜", "キュウリのピクルス", "バター", "サラダ油", "シナッピ(フィンランド産マスタード)", "醤油", "小麦粉", "黒胡椒"]
+    },
+    {
+      "id": "jansson-past",
+      "name": "ヤンソンの誘惑",
+      "name_sub": "Janssons Frestelse",
+      "category": "main",
+      "event_number": 2,
+      "is_current": false,
+      "image": "images/past/ヤンソンの誘惑.jpg",
+      "description": "スウェーデン生まれの名物グラタン。ジャガイモとサーディン、生クリームの相性が抜群\nカリッとした表面、ホクホクとした芋、魚とクリームの旨味が混然一体となって襲いかかる。なんだこれは…！",
+      "ingredients": ["ジャガイモ", "玉ねぎ", "生クリーム", "オイルサーディン", "バター", "パン粉"]
+    },
+    {
+      "id": "salmon-sandwich-past",
+      "name": "サーモンマリネのオープンサンド",
+      "name_sub": "Salmon Marinade Open Sandwich",
+      "category": "appetizer",
+      "event_number": 3,
+      "is_current": false,
+      "image": "images/past/サーモンマリネのオープンサンド.jpg",
+      "description": "グラーヴィロヒ(塩と砂糖で脱水させたサーモン)と手作りカッテージチーズをライ麦パンにのせた、北欧風オープンサンド。\n肌寒い海風が止んだ瞬間に、手袋を外してオープンサンドを口に運ぶ。3種類の違った酸味が、面白い。",
+      "ingredients": ["サーモン", "ライ麦パン", "牛乳", "酢", "ディル", "レモン汁", "バター"]
+    },
+    {
+      "id": "mushroom-past",
+      "name": "ごろごろ焼きキノコ",
+      "name_sub": "Forest Mushroom Saute",
+      "category": "appetizer",
+      "event_number": 3,
+      "is_current": false,
+      "image": "images/past/ごろごろ焼きキノコ.jpg",
+      "description": "大きくカットした色んなキノコを、バターとハーブでソテー。\n森の外れの宿で出された、大胆で素朴なごろっとしたソテー。強い旨味に手が止まらない。帰りにまたここへ寄る理由が出来てしまった。",
+      "ingredients": ["椎茸、マッシュルーム、平茸など季節のキノコ3～4種", "バター", "ニンニク", "イタリアンパセリ", "唐辛子", "黒胡椒"]
+    },
+    {
+      "id": "blueberry-cake-past",
+      "name": "ブルーベリーとココアのパウンドケーキ",
+      "name_sub": "Blueberry & Cacao Pound Cake",
+      "category": "dessert",
+      "event_number": 3,
+      "is_current": false,
+      "image": "images/past/ブルーベリーとココアのパウンドケーキ.jpg",
+      "description": "ブルーベリーとココアを使ったパウンドケーキ。\n「もう店じまいだから余ったこれをあげるわ」。そういってカフェの奥さんは一切れの黒いパウンドケーキをくれた。優しさを形にしたような味がした。",
+      "ingredients": ["小麦粉", "バター", "卵", "砂糖", "ブルーベリー", "カカオパウダー", "ベーキングパウダー"]
+    },
+    {
+      "id": "witch-lantern-past",
+      "name": "魔女のジャック・オ・グラタン",
+      "name_sub": "Witch's Jack-o'-Gratin",
+      "category": "dessert",
+      "event_number": 4,
+      "is_current": false,
+      "image": "images/past/魔女のジャックオグラタン.jpg",
+      "description": "サーウィン限定、カボチャと林檎のグラタン。\n「林檎とカボチャ、違った甘さだろう？これはね、2つの世界が混ざり合うってことなんだよ。どこの世界とだって？ヒッヒッヒ、この世と、あの世さね」",
+      "ingredients": ["カボチャ", "林檎", "牛乳", "シュレッドチーズ", "バター", "小麦粉", "ナツメグ"]
+    },
+    {
+      "id": "samhain-bannock-past",
+      "name": "サーウィンのバノック",
+      "name_sub": "Samhain Bannock",
+      "category": "dessert",
+      "event_number": 4,
+      "is_current": false,
+      "image": "images/past/サーウィンのバノック(3個分).jpg",
+      "description": "ケルトの古代ドルイドが作ったとされる、アイルランド・スコットランドの焼き菓子。\nドルイドが祈祷を終えると参列者達に堅い石焼のオーツパンが配られた。干し葡萄の甘酸っぱさが疲れを消してくれるようだ。",
+      "ingredients": ["オーツ麦", "小麦粉", "ラード", "蜂蜜", "レーズン", "サラダ油"]
+    },
+    {
+      "id": "pannukakku-past",
+      "name": "パンヌカック-オーブン焼きのパンケーキ",
+      "name_sub": "Pannukakku",
+      "category": "dessert",
+      "event_number": 5,
+      "is_current": false,
+      "image": "images/past/パンヌカック-オーブン焼きパンケーキ.jpg",
+      "description": "フィンランドの定番スイーツ、オーブンで焼くもっちりパンケーキ。\n鍋の底が見えるころ、おかみさんが言った。「みんな、パンヌカックがあるわよ！君、何枚食べる？え、1枚？なーに言ってんの、3枚くらい軽くいけるわよ」皿の上にパンヌカックが山積みになった。",
+      "ingredients": ["小麦粉", "牛乳", "卵", "バター", "砂糖", "バニラアイス", "苺ジャム"]
+    },
+    {
+      "id": "joulutorttu-past",
+      "name": "ヨウルトルットゥ-プルーンの星形パイ",
+      "name_sub": "Joulutorttu",
+      "category": "dessert",
+      "event_number": 5,
+      "is_current": false,
+      "image": "images/past/ヨウルトルットゥ-プルーンの星形パイ.jpg",
+      "description": "フィンランドの聖なる夜に欠かせない星形パイ。\nオーブンの戸が開くと、香ばしいパイの香りが小屋いっぱいに広がった。すぐ手を伸ばしたいけど、焼き立てだと火傷しちゃうから、がまんがまん。",
+      "ingredients": ["冷凍パイ生地", "ドライプルーン", "粉砂糖", "卵"]
+    },
+    {
+      "id": "mage-experiment-past",
+      "name": "見習い魔法使いの実験セット",
+      "name_sub": "Apprentice Mage's Experiment",
+      "category": "appetizer",
+      "event_number": 6,
+      "is_current": false,
+      "image": "images/past/見習い魔法使いの実験セット.jpg",
+      "description": "試作中の料理3種をお手頃価格で試せる、お得な前菜3種盛り。ヘルネトゥーヴィンキ(豆のオーブン焼き)、カポナータ(夏野菜のトマト煮)、ミックスハーブ&スパイスの骨付きラム肉\n修行中の見習い魔法使いの少年が初めて店主に任された料理は、前菜だった。「あれ？おーいボウズ、ラム肉見てないか？何っ？前菜で使った？オイオイ、主役がなくなっちまったじゃないか。参ったな」",
+      "ingredients": ["パンチェッタ", "トマト", "茄子", "ピーマン", "ニンニク", "玉葱", "人参", "ズッキーニ", "レーズン", "グリンピース", "生クリーム", "小麦粉", "骨付きラム肉", "イタリアンパセリ"]
+    },
+    {
+      "id": "shepherd-goulash-past",
+      "name": "羊飼いのグヤーシュ",
+      "name_sub": "Shepherd's Goulash",
+      "category": "main",
+      "event_number": 6,
+      "is_current": false,
+      "image": "images/past/羊飼いのグヤーシュ&パン.jpg",
+      "description": "ハンガリーの国民的料理、牛肉のパプリカ煮込み。\n羊飼いの少女が手際よく作ってくれたのは豪勢な肉の煮込みだった。「長い冬に向けて潰したお肉だけど、まだ新鮮よ。羊たちが今のうちに草をいっぱい食べるように、私たちも力を付けなくっちゃ。",
+      "ingredients": ["牛肉", "パプリカ", "玉ねぎ", "人参", "ジャガイモ", "トマト缶", "パン", "ローリエ", "キャラウェイシード", "黒胡椒"]
+    },
+    {
+      "id": "spring-pasta-past",
+      "name": "春のパスタ",
+      "name_sub": "Spring Pasta",
+      "category": "main",
+      "event_number": 6,
+      "is_current": false,
+      "image": "images/past/春のパスタ.jpg",
+      "description": "パナメイ海老と春野菜を使った華やかなパスタ。ショートパスタの種類は店主に尋ねて。\n町同士をつなぐこの街道沿いに立つ食堂は行商人達の行きつけの店だった。海の幸、野の幸、山の幸など、様々な食材が行き交うこの立地だからこその、華やかな料理を楽しめる、と有名なのだ。",
+      "ingredients": ["フジッリやファルファッレなどのショートパスタ", "パナメイ海老", "新玉葱", "春キャベツ", "乾燥アミエビ", "ニンニク", "唐辛子"]
+    },
+    {
+      "id": "nordic-forest-pasta-past",
+      "name": "北欧の森のスパゲティ",
+      "name_sub": "Nordic Forest Spaghetti",
+      "category": "main",
+      "event_number": 6,
+      "is_current": false,
+      "image": "images/past/北欧の森のスパゲティ.jpg",
+      "description": "ディルが効いた、北欧の森の恵みを詰め込んだスパゲティ。\n「地虫の寝息、胞子の歌、木の葉の囁き。森の声が聞こえないなんて、人間て可哀想よね」隠れ泉の精がクスっと笑って言った。",
+      "ingredients": ["スパゲティ", "株なめこ", "マッシュルーム", "平茸", "ニンニク", "ディル", "バター"]
+    },
+    {
+      "id": "winter-forest-pasta-past",
+      "name": "冬の森のスパゲティ",
+      "name_sub": "Winter Forest Spaghetti",
+      "category": "main",
+      "event_number": 7,
+      "is_current": false,
+      "image": "images/past/冬の森のスパゲティ.jpg",
+      "description": "季節のキノコの旨味を溶かしこんだクリーミーなスパゲティ。\n振舞われたのは、木々の間に積もった雪の間に見えるきのこ、そんな風貌の一皿だった。これが食べられるなら、寒い冬も楽しみになるってものだ。",
+      "ingredients": ["スパゲティ", "平茸", "椎茸", "しめじ", "生クリーム", "ディル"]
     }
   ]
 }

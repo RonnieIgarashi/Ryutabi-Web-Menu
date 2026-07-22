@@ -1,7 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
-  <rect width="400" height="300" fill="#2C5F2E"/>
-  <rect x="2" y="2" width="396" height="296" fill="none" stroke="#C9A84C" stroke-width="2"/>
-  <text x="200" y="130" font-family="serif" font-size="56" fill="#C9A84C" text-anchor="middle">&#x1F409;</text>
-  <text x="200" y="178" font-family="serif" font-size="18" fill="#C9A84C" text-anchor="middle" letter-spacing="4">竜の旅路亭</text>
-  <text x="200" y="208" font-family="serif" font-size="12" fill="#8faf90" text-anchor="middle" letter-spacing="2">No Image</text>
+  <defs>
+    <linearGradient id="parch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#F5EDCC"/>
+      <stop offset="50%"  stop-color="#EAD9B2"/>
+      <stop offset="100%" stop-color="#D8C890"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#parch)"/>
+  <rect x="3" y="3" width="394" height="294" fill="none" stroke="#A87A10" stroke-width="1.5" opacity="0.7"/>
+  <rect x="8" y="8" width="384" height="284" fill="none" stroke="#A87A10" stroke-width="0.8" opacity="0.4"/>
+  <!-- 竜の旅路亭ロゴ -->
+  <image href="店舗ロゴ_竜の旅路亭_v3_2.png" x="80" y="30" width="240" height="200" preserveAspectRatio="xMidYMid meet" opacity="0.55"/>
+  <!-- Sub text -->
+  <text x="200" y="272" font-family="Georgia, serif" font-size="11" font-style="italic" fill="#7A5830" text-anchor="middle" letter-spacing="2" opacity="0.6">photo coming soon</text>
+  <!-- Corner ornaments -->
+  <text x="18" y="28"  font-family="serif" font-size="14" fill="#A87A10" opacity="0.5">&#x2736;</text>
+  <text x="372" y="28"  font-family="serif" font-size="14" fill="#A87A10" opacity="0.5" text-anchor="end">&#x2736;</text>
+  <text x="18" y="292" font-family="serif" font-size="14" fill="#A87A10" opacity="0.5">&#x2736;</text>
+  <text x="372" y="292" font-family="serif" font-size="14" fill="#A87A10" opacity="0.5" text-anchor="end">&#x2736;</text>
 </svg>
