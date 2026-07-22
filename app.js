@@ -87,7 +87,7 @@ function openModal(navIndex) {
     const modal = document.getElementById('modal');
     const img   = document.getElementById('modal-image');
 
-    img.className = '';
+    img.className = 'modal-image';
     img.src = dish.image || PLACEHOLDER;
     img.alt = dish.name;
     if (!dish.image) img.classList.add('placeholder-img');
