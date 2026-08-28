@@ -1,10 +1,12 @@
 const PLACEHOLDER = 'images/店舗ロゴ_竜の旅路亭_v3_2.png';
 
+// ===== i18n =====
+const LANG_KEY = 'ryutabi-lang';
+let lang = localStorage.getItem(LANG_KEY) === 'en' ? 'en' : 'ja';
+
 const CATEGORY_LABELS = {
-    appetizer: '前菜',
-    main:      '食事',
-    dessert:   'デザート',
-    drink:     'ドリンク',
+    ja: { appetizer: '前菜', main: '食事', dessert: 'デザート', drink: 'ドリンク' },
+    en: { appetizer: 'Appetizer', main: 'Main', dessert: 'Dessert', drink: 'Drink' },
 };
 const CATEGORY_CSS = {
     appetizer: 'cat-appetizer',
@@ -12,6 +14,35 @@ const CATEGORY_CSS = {
     dessert:   'cat-dessert',
     drink:     'cat-drink',
 };
+const UI_TEXT = {
+    ja: {
+        current: '今回のお料理', currentSub: 'Current Menu',
+        drinks: 'ドリンク', drinksSub: 'Drinks',
+        archive: '過去のお料理', archiveSub: 'The Grand Compendium',
+        eventLabel: (n, d) => `第${n}回 — ${d}`,
+        modalEvent: n => `第 ${n} 回 ご提供`,
+        emptyCurrent: '準備中', emptyDrinks: '準備中', emptyArchive: '過去の料理データを追加予定',
+        toggleLabel: 'EN', toggleAria: 'Switch to English',
+    },
+    en: {
+        current: 'Current Menu', currentSub: '今回のお料理',
+        drinks: 'Drinks', drinksSub: 'ドリンク',
+        archive: 'The Grand Compendium', archiveSub: '過去のお料理',
+        eventLabel: (n, d) => `Tavern Night #${n} — ${d}`,
+        modalEvent: n => `Served at Tavern Night #${n}`,
+        emptyCurrent: 'Coming soon', emptyDrinks: 'Coming soon', emptyArchive: 'Archive coming soon',
+        toggleLabel: '日本語', toggleAria: '日本語に切り替え',
+    },
+};
+
+// 表示用テキスト取得（EN欠落時は日本語へフォールバック）
+function dishName(dish)    { return lang === 'en' ? (dish.name_sub || dish.name) : dish.name; }
+function dishNameSub(dish) { return lang === 'en' ? dish.name : (dish.name_sub || ''); }
+function dishDesc(dish)    { return lang === 'en' ? (dish.description_en || dish.description || '') : (dish.description || ''); }
+function dishIngredients(dish) {
+    if (lang === 'en' && Array.isArray(dish.ingredients_en) && dish.ingredients_en.length) return dish.ingredients_en;
+    return dish.ingredients || [];
+}
 
 async function loadDishes() {
     const res = await fetch('data/dishes.json');
@@ -20,8 +51,8 @@ async function loadDishes() {
 }
 
 function categoryBadge(category) {
-    if (!category || !CATEGORY_LABELS[category]) return '';
-    const label = CATEGORY_LABELS[category];
+    if (!category || !CATEGORY_LABELS[lang][category]) return '';
+    const label = CATEGORY_LABELS[lang][category];
     const cls   = CATEGORY_CSS[category] || '';
     return `<span class="category-badge ${cls}">${label}</span>`;
 }
@@ -34,12 +65,13 @@ function createCard(dish, navIndex) {
 
     const imgSrc = dish.image || PLACEHOLDER;
     const imgClass = dish.image ? '' : ' class="placeholder-img"';
+    const sub = dishNameSub(dish);
     card.innerHTML = `
-        <img src="${imgSrc}" alt="${dish.name}"${imgClass} onerror="this.onerror=null; this.src='${PLACEHOLDER}'; this.classList.add('placeholder-img')">
+        <img src="${imgSrc}" alt="${dishName(dish)}"${imgClass} onerror="this.onerror=null; this.src='${PLACEHOLDER}'; this.classList.add('placeholder-img')">
         <div class="dish-card-body">
             ${categoryBadge(dish.category)}
-            <p class="dish-card-name">${dish.name}</p>
-            ${dish.name_sub ? `<p class="dish-card-sub">${dish.name_sub}</p>` : ''}
+            <p class="dish-card-name">${dishName(dish)}</p>
+            ${sub ? `<p class="dish-card-sub">${sub}</p>` : ''}
         </div>
     `;
 
@@ -89,19 +121,19 @@ function openModal(navIndex) {
 
     img.className = 'modal-image';
     img.src = dish.image || PLACEHOLDER;
-    img.alt = dish.name;
+    img.alt = dishName(dish);
     if (!dish.image) img.classList.add('placeholder-img');
     img.onerror = () => { img.onerror = null; img.src = PLACEHOLDER; img.classList.add('placeholder-img'); };
 
     document.getElementById('modal-category-badge').innerHTML = categoryBadge(dish.category);
-    document.getElementById('modal-name').textContent        = dish.name;
-    document.getElementById('modal-name-sub').textContent    = dish.name_sub || '';
-    document.getElementById('modal-event').textContent       = `第 ${dish.event_number} 回 ご提供`;
+    document.getElementById('modal-name').textContent        = dishName(dish);
+    document.getElementById('modal-name-sub').textContent    = dishNameSub(dish);
+    document.getElementById('modal-event').textContent       = UI_TEXT[lang].modalEvent(dish.event_number);
 
-    renderDescription(document.getElementById('modal-description'), dish.description || '');
+    renderDescription(document.getElementById('modal-description'), dishDesc(dish));
 
     const tagsEl = document.getElementById('modal-ingredients');
-    tagsEl.innerHTML = (dish.ingredients || [])
+    tagsEl.innerHTML = dishIngredients(dish)
         .map(i => `<span class="ingredient-tag">${i}</span>`)
         .join('');
 
@@ -133,14 +165,48 @@ function closeModal() {
     currentNavIndex = -1;
 }
 
-async function init() {
-    const data = await loadDishes();
+// ===== 描画（言語切替時に再実行） =====
+let dishesData = null;
+
+function applyStaticText() {
+    const t = UI_TEXT[lang];
+    document.documentElement.lang = lang;
+
+    const setBanner = (sectionId, title, sub) => {
+        const sec = document.getElementById(sectionId);
+        if (!sec) return;
+        const h2 = sec.querySelector('.section-banner h2');
+        const subEl = sec.querySelector('.section-banner .section-sub');
+        if (h2) h2.textContent = title;
+        if (subEl) subEl.textContent = sub;
+    };
+    setBanner('current-menu', t.current, t.currentSub);
+    setBanner('drinks-menu', t.drinks, t.drinksSub);
+    setBanner('archive', t.archive, t.archiveSub);
+
+    const toggle = document.getElementById('lang-toggle');
+    if (toggle) {
+        toggle.textContent = t.toggleLabel;
+        toggle.setAttribute('aria-label', t.toggleAria);
+    }
+}
+
+function renderAll() {
+    const data = dishesData;
+    if (!data) return;
+    const t = UI_TEXT[lang];
+
+    applyStaticText();
 
     const label = document.getElementById('event-label');
-    label.textContent = `第${data.current_event.number}回 — ${data.current_event.date}`;
+    label.textContent = t.eventLabel(data.current_event.number, data.current_event.date);
 
     const currentGrid  = document.getElementById('current-grid');
+    const drinksGrid   = document.getElementById('drinks-grid');
     const archiveGrid  = document.getElementById('archive-grid');
+    currentGrid.innerHTML = '';
+    drinksGrid.innerHTML  = '';
+    archiveGrid.innerHTML = '';
 
     const currentDishes = data.dishes.filter(d => d.is_current && d.category !== 'drink');
     const drinkDishes   = data.dishes.filter(d => d.is_current && d.category === 'drink');
@@ -160,23 +226,43 @@ async function init() {
     navOrder = [...currentDishes, ...drinkDishes, ...archiveDishes];
 
     if (currentDishes.length === 0) {
-        currentGrid.innerHTML = '<p class="empty-note">準備中</p>';
+        currentGrid.innerHTML = `<p class="empty-note">${t.emptyCurrent}</p>`;
     } else {
         currentDishes.forEach(d => currentGrid.appendChild(createCard(d, navOrder.indexOf(d))));
     }
 
-    const drinksGrid = document.getElementById('drinks-grid');
     if (drinkDishes.length === 0) {
-        drinksGrid.innerHTML = '<p class="empty-note">準備中</p>';
+        drinksGrid.innerHTML = `<p class="empty-note">${t.emptyDrinks}</p>`;
     } else {
         drinkDishes.forEach(d => drinksGrid.appendChild(createCard(d, navOrder.indexOf(d))));
     }
 
     if (archiveDishes.length === 0) {
-        archiveGrid.innerHTML = '<p class="empty-note">過去の料理データを追加予定</p>';
+        archiveGrid.innerHTML = `<p class="empty-note">${t.emptyArchive}</p>`;
     } else {
         archiveDishes.forEach(d => archiveGrid.appendChild(createCard(d, navOrder.indexOf(d))));
     }
+}
+
+function toggleLang() {
+    lang = lang === 'ja' ? 'en' : 'ja';
+    localStorage.setItem(LANG_KEY, lang);
+    const wasOpen = currentNavIndex >= 0 ? navOrder[currentNavIndex] : null;
+    renderAll();
+    // モーダルを開いたまま切り替えた場合は同じ料理で再表示
+    if (wasOpen) {
+        const idx = navOrder.indexOf(wasOpen);
+        if (idx >= 0) openModal(idx);
+    }
+}
+
+async function init() {
+    dishesData = await loadDishes();
+
+    renderAll();
+
+    const toggle = document.getElementById('lang-toggle');
+    if (toggle) toggle.addEventListener('click', toggleLang);
 
     document.getElementById('modal-close').addEventListener('click', closeModal);
     document.getElementById('modal-overlay').addEventListener('click', closeModal);

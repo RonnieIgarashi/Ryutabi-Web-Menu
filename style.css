@@ -119,6 +119,38 @@ main::before {
     color: var(--ink-mid);
 }
 
+.main-top-actions {
+    display: flex;
+    align-items: stretch;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.main-top-actions .lang-toggle,
+.main-top-actions .blog-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.lang-toggle {
+    font-family: var(--font-en);
+    font-style: italic;
+    color: var(--ink);
+    font-size: 0.95rem;
+    padding: 0.55rem 1.3rem;
+    border: 2px solid var(--brass-lo);
+    background: rgba(180,130,20,0.08);
+    cursor: pointer;
+    line-height: normal;
+}
+
+.lang-toggle:hover {
+    background: rgba(180,130,20,0.18);
+    border-color: var(--brass-hi);
+    color: var(--ink-mid);
+}
+
 /* ===== SECTION BANNER ===== */
 .section-banner {
     text-align: center;
