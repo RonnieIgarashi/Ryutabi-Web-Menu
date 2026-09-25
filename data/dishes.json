@@ -1,7 +1,7 @@
 {
   "current_event": {
-    "number": 11,
-    "date": "2026-08-28"
+    "number": 12,
+    "date": "2026-09-25"
   },
   "dishes": [
     {
@@ -31,7 +31,7 @@
       "name_sub": "Troll's Dinner - Minced Meat & Penne Casserole",
       "category": "main",
       "event_number": 9,
-      "is_current": false,
+      "is_current": true,
       "image": "images/current/トロールの夕食-ペンネラーティッコ.jpg",
       "description": "フィンランド料理のマカロニラーティッコをアレンジしたオーブン料理。ペンネとミートソース、チーズを重ね焼き。卵液には生クリームを使って濃厚さUP！\n「ご飯まだ－？」騒ぐ子供たちの前にトロールのママが焼き立てのキャセロールを置くと一斉に歓声が上がった。「やったーマカロニラーティッコだ！ケチャップちょうだい！」",
       "ingredients": [
@@ -104,7 +104,7 @@
       "name_sub": "Homemade Ginger Ale Gin Buck",
       "category": "drink",
       "event_number": 10,
-      "is_current": false,
+      "is_current": true,
       "image": "images/current/自家製ジンジャーエールのジンバック.jpg",
       "description": "ジンを自家製のスパイシーなジンジャーエールで割った定番カクテル。",
       "ingredients": [
@@ -197,8 +197,8 @@
       "name_sub": "The Mage's Trio",
       "category": "appetizer",
       "event_number": 11,
-      "is_current": true,
-      "image": "images/current/見習い魔法使いの前菜セット_202607.jpg",
+      "is_current": false,
+      "image": "images/current/見習い魔法使いの前菜セット_202608.jpg",
       "description": "フィンランド流キュウリのサラダ、Makkaraperunat(ソーセージ&ジャガイモ炒め)、茄子のカポナータ、の3種盛り合わせ。",
       "ingredients": [
         "キュウリ",
@@ -215,12 +215,47 @@
       ]
     },
     {
+      "id": "mage-appetizer-trio-12",
+      "name": "見習い魔法使いの前菜3種セット",
+      "name_sub": "The Mage's Trio",
+      "category": "appetizer",
+      "event_number": 12,
+      "is_current": true,
+      "image": "images/current/見習い魔法使いの前菜セット_202608.jpg",
+      "description": "フィンランド流キュウリのサラダ、Makkaraperunat(ソーセージ&ジャガイモ炒め)、Hernetuuvinki(豆ペーストのオーブン焼き)、の3種盛り合わせ。",
+      "ingredients": [
+        "キュウリ",
+        "ディル",
+        "ソーセージ",
+        "ジャガイモ",
+        "玉葱",
+        "Sinappi(フィンランド産マスタード)",
+        "グリンピース",
+        "生クリーム",
+        "バター",
+        "小麦粉"
+      ],
+      "description_en": "A trio of Finnish-style cucumber salad, makkaraperunat (sausage and potatoes pan-fried together), and hernetuuvinki (oven-baked pea purée).",
+      "ingredients_en": [
+        "Cucumber",
+        "Dill",
+        "Sausage",
+        "Potato",
+        "Onion",
+        "Sinappi (Finnish mustard)",
+        "Green peas",
+        "Heavy cream",
+        "Butter",
+        "Wheat flour"
+      ]
+    },
+    {
       "id": "puttanesca-08",
       "name": "季節野菜の娼婦風リングイーネ",
       "name_sub": "Puttanesca with Seasonal Vegetables",
       "category": "main",
       "event_number": 8,
-      "is_current": true,
+      "is_current": false,
       "image": "images/current/季節野菜の娼婦風リングイーネ.jpg",
       "description": "オイルサーディンと季節の野菜を使った娼婦風パスタ(プッタネスカ)。ブラックオリーブ、ケイパー、サーディンが織りなす大人な味わい。トマトベースのソースです。\n身も心も癒してくれるという高貴な出の娼婦の噂は領主や貴族までもを魅了した。おや、また高価そうな外套を目深に被った男が館に入って行った。",
       "ingredients": [
@@ -255,7 +290,7 @@
       "name_sub": "Lakeside Sunbeams - Chunky Salmon Spaghetti",
       "category": "main",
       "event_number": 11,
-      "is_current": true,
+      "is_current": false,
       "image": "images/current/湖畔の木漏れ日-ごろっとサーモンのスパゲティ.jpg",
       "description": "ごろっとした大ぶりカットのサーモンが特徴の、さっぱりとしたオイルベーススパゲティです。フィンランドの湖沿いでのランチに思いを馳せて…。\n湖畔を歩いていて見つけた可愛らしいレストランで出てきたのは、サーモンのパスタだ。口の中でふわりとほどける優しい食感に、旅の疲れが癒されるようだ。この時間をずっと求めていた。揺れる木漏れ日を見てそう感じたのだ。",
       "ingredients": [
@@ -284,11 +319,11 @@
     },
     {
       "id": "carbonara-08",
-      "name": "春先の森のカルボナーラ",
+      "name": "春先の森のスパゲティ・カルボナーラ",
       "name_sub": "Forest Carbonara",
       "category": "main",
       "event_number": 8,
-      "is_current": false,
+      "is_current": true,
       "image": "images/past/春先の森のカルボナーラ.jpg",
       "description": "自家製パンチェッタと椎茸、アスパラを使ったカルボナーラ。\n深い森の中に住む魔女が振舞ってくれたのは、炭焼き職人から教えてもらったという料理だった。森の恵みを加えているのは、彼女のアレンジだ。",
       "ingredients": [
